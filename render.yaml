@@ -3,7 +3,7 @@ services:
     name: ethara-backend
     env: docker
     rootDir: backend
-    plan: free
+    plan: starter
     autoDeploy: true
     envVars:
       - key: DATABASE_URL
@@ -17,7 +17,7 @@ services:
     name: ethara-frontend
     env: static
     rootDir: frontend
-    plan: free
+    plan: starter
     autoDeploy: true
     buildCommand: npm ci && npm run build
     staticPublishPath: dist
@@ -27,6 +27,6 @@ services:
 
 databases:
   - name: ethara-db
-    plan: free
+    plan: starter
     databaseName: ethara_db
     user: ethara_user
